@@ -21,7 +21,7 @@ function onSubmit(event) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ "data": value.text })
+        body: JSON.stringify({ "data": [value.text] })
     })
         .then(function (response) {
             if (response.status != 200) {
@@ -30,9 +30,9 @@ function onSubmit(event) {
                 confidencesEl.innerHTML = '';
                 return;
             }
-            console.log(response)
             return response.json();
         }).then(function (json_response) {
+            console.log(json_response)
             const label = json_response?.data[0]?.label;
             const pred = label ? 'Depression' : 'Not Depression';
             const confidence = json_response?.data[0]?.confidences[0]?.confidence

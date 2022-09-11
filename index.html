@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Depression Predictor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="info">
+    <h1>Predict whether or not a block of text displays signs of depression</h1>
+    <p>Model provided by <a href="https://huggingface.co/docs/transformers/index">
+        hugging face transformers
+      </a> and api hosted by <a href="https://hf.space/embed/se0ngbin/depression-classifier/+/" target="_blank">hugging
+        face spaces</a>
+    </p>
+    <p><a href="https://github.com/se0ngbin/depression-classifier" target="_blank">Link</a> to Github Repo</p>
+    <p><a href="http://blog.seongbin.me/machine-learning/projects/2022/09/01/depressionPredictor.html"
+        target="_blank">Link</a> to Blog Post</p>
+  </div>
+  <div class="body">
+    <div class="result">
+      <h2>Input Text for Prediction</h2>
+    </div>
+    <div class="uploader">
+      <form id="form" onsubmit="onSubmit(event)">
+        <textarea id="text" name="text" placeholder="Enter text here"></textarea>
+        <input id="submitbtn" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  <div class="results">
+    <h2 id="predTitle"></h2>
+    <p id="prediction"></p>
+    <p id="confidences"></p>
+    <p id="error"></p>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+    /* background color is dark  purple */
+    background-color: #d2bef4;
+    color:#252625;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+a {
+    color: rgb(95, 0, 109);
+    text-decoration: none
+}
+
+.info, .body, .uploader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+/* increase size of textarea */
+textarea {
+    width: 400px;
+    height: 200px;
+    /* round corners */
+    border-radius: 5px;
+    /* border color is dark purple */
+    border: 2px solid rgb(95, 0, 109);
+    /* background color is light purple */
+    background-color: #f2e9f9;
+    /* text color is dark purple */
+    color: #252625;
+    /* font size is 20px */
+    font-size: 15px;
+    /* font family is Lato */
+    font-family: 'Lato', sans-serif;
+    padding: 5px;  
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+#submitbtn {
+    /* submit button */
+    background-color: #f2e9f9;
+    /* border color is dark purple */
+    border: 1px solid #252625;
+    /* text color is dark purple */
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
